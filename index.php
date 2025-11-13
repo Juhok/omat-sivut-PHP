@@ -12,26 +12,46 @@
  <section class="quiz" aria-labelledby="quiz-title">
    <h3 id="quiz-title">Pieni tiikeri-visailu</h3>
    <form id="quiz-form">
-     <ol>
-       <li>
-         <p>Missä maassa Bengalin tiikeri elää pääosin?</p>
-         <label><input type="radio" name="q1" value="a"> Australia</label><br>
-         <label><input type="radio" name="q1" value="b"> Intia</label><br>
-         <label><input type="radio" name="q1" value="c"> Kanada</label>
-       </li>
-       <li>
-         <p>Mikä seuraavista on tiikerin pääasiallinen ruokavalio?</p>
-         <label><input type="radio" name="q2" value="a"> Kasvit</label><br>
-         <label><input type="radio" name="q2" value="b"> Hyönteiset</label><br>
-         <label><input type="radio" name="q2" value="c"> Liha</label>
-       </li>
-       <li>
-         <p>Kuinka monta alalajia tiikerillä on historiallisesti ollut (noin)?</p>
-         <label><input type="radio" name="q3" value="a"> Yli 6</label><br>
-         <label><input type="radio" name="q3" value="b"> 1</label><br>
-         <label><input type="radio" name="q3" value="c"> 0</label>
-       </li>
-     </ol>
+     <table class="quiz-table" summary="Kysymykset ja vastausvaihtoehdot">
+       <thead>
+         <tr>
+           <th>Kysymys</th>
+           <th>Vastaus</th>
+         </tr>
+       </thead>
+       <tbody>
+         <tr>
+           <td>Missä maassa Bengalin tiikeri elää pääosin?</td>
+           <td>
+             <div class="options">
+               <label class="option"><input type="radio" id="q1_a" name="q1" value="a"> <span>Australia</span></label>
+               <label class="option"><input type="radio" id="q1_b" name="q1" value="b"> <span>Intia</span></label>
+               <label class="option"><input type="radio" id="q1_c" name="q1" value="c"> <span>Kanada</span></label>
+             </div>
+           </td>
+         </tr>
+         <tr>
+           <td>Mikä seuraavista on tiikerin pääasiallinen ruokavalio?</td>
+           <td>
+             <div class="options">
+               <label class="option"><input type="radio" id="q2_a" name="q2" value="a"> <span>Kasvit</span></label>
+               <label class="option"><input type="radio" id="q2_b" name="q2" value="b"> <span>Hyönteiset</span></label>
+               <label class="option"><input type="radio" id="q2_c" name="q2" value="c"> <span>Liha</span></label>
+             </div>
+           </td>
+         </tr>
+         <tr>
+           <td>Kuinka monta alalajia tiikerillä on historiallisesti ollut (noin)?</td>
+           <td>
+             <div class="options">
+               <label class="option"><input type="radio" id="q3_a" name="q3" value="a"> <span>Yli 6</span></label>
+               <label class="option"><input type="radio" id="q3_b" name="q3" value="b"> <span>1</span></label>
+               <label class="option"><input type="radio" id="q3_c" name="q3" value="c"> <span>0</span></label>
+             </div>
+           </td>
+         </tr>
+       </tbody>
+     </table>
 
      <button type="submit">Tarkista vastaukset</button>
    </form>
