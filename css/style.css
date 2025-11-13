@@ -146,3 +146,26 @@ form input, form textarea { display:block; width:100%; max-width:480px; margin:8
 @media (max-width: 520px) {
   .profile { width: 48%; max-width: none; }
 }
+
+/* Quiz-tyylit */
+.quiz {
+  max-width: 720px;
+  background: #fafafa;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  margin-top: 1.25rem;
+}
+.quiz h3 { margin-top: 0; }
+.quiz ol { padding-left: 1.2rem; }
+.quiz label { cursor: pointer; display: inline-block; margin: 0.25rem 0; }
+.quiz button {
+  margin-top: 0.6rem;
+  padding: 0.5rem 0.9rem;
+  border: none;
+  background: #2b6cb0;
+  color: #fff;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.quiz button:hover { background: #245a9a; }
