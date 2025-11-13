@@ -1,0 +1,148 @@
+body { font-family: Arial, sans-serif; margin:0; padding:0; line-height:1.5; }
+.site-header, .site-footer { background:#222; color:#fff; padding:10px 20px; }
+.site-header h1 { margin:0; font-size:1.2rem; }
+nav a { color:#fff; text-decoration:none; margin-right:10px; }
+main { padding:20px; }
+form input, form textarea { display:block; width:100%; max-width:480px; margin:8px 0; padding:8px; }
+.success { color: green; }
+.error { color: red; }
+
+/* Lisätty: Responsiivinen galleria about-sivua varten */
+.gallery {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  margin: 1rem 0;
+}
+
+.gallery figure {
+  flex: 1 1 300px;
+  max-width: 480px;
+  margin: 0;
+  background: transparent;
+
+  /* Sama kuvakoko: käytetään suhdetta (4:3) ja varmistetaan responsiivinen korkeus */
+  aspect-ratio: 4 / 3;
+  display: block;
+  overflow: hidden;
+}
+
+/* Kuva täyttää ruudun, leikkaa tarpeen mukaan säilyttäen kuvasuhteen */
+.gallery img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+.gallery figcaption {
+  font-size: 0.9rem;
+  color: #444;
+  margin-top: 0.4rem;
+  text-align: center;
+}
+
+@media (max-width: 520px) {
+  .gallery { gap: 0.8rem; }
+  .gallery figure {
+    flex: 1 1 100%;
+    max-width: 100%;
+    aspect-ratio: 4 / 3;
+  }
+}
+
+/* Lightbox / modal-tyylit */
+.lightbox {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  z-index: 1000;
+}
+.lightbox.open {
+  display: flex;
+}
+.lightbox-content {
+  background: #fff;
+  max-width: 900px;
+  width: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0;
+}
+.lightbox-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  max-height: 70vh;
+  object-fit: contain;
+  background: #000;
+}
+.lightbox-meta {
+  padding: 1rem;
+}
+.lightbox-title {
+  margin: 0 0 0.4rem 0;
+  font-size: 1.1rem;
+}
+.lightbox-info {
+  margin: 0;
+  color: #333;
+  line-height: 1.4;
+}
+.lightbox-close {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-size: 2rem;
+  line-height: 1;
+  cursor: pointer;
+  padding: 0;
+  z-index: 1010;
+}
+
+/* Kun lightbox on auki, muutetaan close-napin väri ja paikka näkyväksi */
+.lightbox.open .lightbox-close {
+  color: #fff;
+  position: fixed;
+}
+
+/* Pieni säätö mobiilissa */
+@media (max-width: 640px) {
+  .lightbox-content { max-width: 95%; }
+  .lightbox-img { max-height: 50vh; }
+  .lightbox-meta { padding: 0.75rem; }
+}
+
+/* Profiilikuva — yksinkertainen, responsiivinen ja sama koko eri kuvissa */
+.profile {
+  width: min(240px, 40%);
+  max-width: 240px;
+  aspect-ratio: 1 / 1;
+  margin: 1rem 0;
+  overflow: hidden;
+  border-radius: 6px;
+}
+.profile img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+@media (max-width: 520px) {
+  .profile { width: 48%; max-width: none; }
+}
